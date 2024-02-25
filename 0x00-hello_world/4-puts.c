@@ -1,11 +1,8 @@
 #include <stdio.h>
-/*
- *the main functions prints using puts function
- *and returns 0
- */
-/*
- *main function prints a statement
- */
+/**
+  * main - main function prints using puts
+  * Return: always return 0
+  */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");

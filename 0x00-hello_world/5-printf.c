@@ -1,8 +1,8 @@
 #include <stdio.h>
-/*
- * main(): prints a statemet using prints
- * returns 0
- */
+/**
+  * main - main function prints usinf printf
+  * Return: always return 0
+  */
 int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art");

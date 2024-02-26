@@ -1,0 +1,16 @@
+#include "main.h"
+/**
+  * islower - checks if the alphabet is lower or not
+  * Return: returns either 1 or 0
+  */
+int _islower(int c);
+{
+	if(c = islower())
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}

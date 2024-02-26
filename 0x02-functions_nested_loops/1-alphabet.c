@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
   * main - prints lower case alphabet
   * Return: always return 0

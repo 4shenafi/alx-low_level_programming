@@ -3,14 +3,13 @@
   * main - prints lower case alphabet
   * Return: always return 0
   */
-int main(void)
+void print_alphabet(void)
 {
 	char ch;
 
 	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		putchar(ch);
+		_putchar(ch);
 	}
-	putchar('\n');
-	return (0);
+	_putchar('\n');
 }

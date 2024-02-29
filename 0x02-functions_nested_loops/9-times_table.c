@@ -1,30 +1,37 @@
 #include "main.h"
-
 /**
  * times_table - Prints a multiplication table.
  */
 void times_table(void)
 {
-    int row, col, product;
+    int r;
+    int c;
+    int p;
 
-    for (row = 0; row < 10; row++)
+    for (r = 0; r < 10; r++)
     {
-        for (col = 0; col < 10; col++)
+        for (c = 0; c < 10; c++)
         {
-            product = row * col;
-
-            if (col > 0)
+            p = r * c;
+            if (c == 0 || r == 0)
+            {
+                if (c > 0 || r > 0)
+                {
+                    _putchar(',');
+                    _putchar(' ');
+                }
+                _putchar('0');
+            }
+            else
             {
                 _putchar(',');
                 _putchar(' ');
+                if (p < 10)
+                    _putchar(' ');
+                else
+                    _putchar((p / 10) + '0');
+                _putchar((p % 10) + '0');
             }
-
-            if (product < 10)
-                _putchar(' ');
-            else
-                _putchar((product / 10) + '0');
-
-            _putchar((product % 10) + '0');
         }
         _putchar('\n');
     }

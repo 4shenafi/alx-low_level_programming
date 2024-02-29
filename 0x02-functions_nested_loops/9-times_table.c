@@ -1,37 +1,29 @@
 #include "main.h"
+
 /**
-  * times_table - a function prints time table
-  * 
-  */
+ * times_table - Prints a multiplication table.
+ */
 void times_table(void)
 {
-	int n = 0;
-	int j;
-	int i;
-	while (n < 10)
+	int r;
+	int c;
+	int p;
+
+	for (r = 0; r < 10; r++)
 	{
-		_putchar('0');
-		_putchar(',');
-		_putchar(' ');
-		n++;
-	}
-	_putchar('\n');
-	
-	for (i = 0; i < 10; i++)
-	{
-		_putchar('0');
-		_putchar(',');
-		_putchar(' ');
-		_putchar('i');
-		_putchar(',');
-		_putchar(' ');
-		j = i;
-		while (j < 10)
+		for (c = 0; c < 10; c++)
 		{
-			j = j + i;
-			_putchar('j');
-			_putchar(',');
-			_putchar(' ');
+			p = r * c;
+			if (c > 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+			if (p < 10)
+				_putchar(' ');
+			else
+				_putchar((p / 10) + '0');
+			_putchar((p % 10) + '0');
 		}
 		_putchar('\n');
 	}

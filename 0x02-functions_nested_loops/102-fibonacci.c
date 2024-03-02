@@ -9,10 +9,11 @@ int main(void)
 	unsigned long int i = 1;
 	unsigned long int j = 2;
 	unsigned long int n;
+	int k;
 
 	printf("%lu, %lu, ", i, j);
 
-	for (int k = 3; k <= 50; k++)
+	for (k = 3; k <= 50; k++)
 	{
 		n = i + j;
 		printf("%lu", n);

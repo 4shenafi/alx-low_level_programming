@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 /**
   * print_to_98 - is a function prints n to 98
@@ -6,12 +5,26 @@
   */
 void print_to_98(int n)
 {
-	int i;
+	int i, j;
 
-	for (i = n; i <= 98; i++)
+	if (n <= 98)
 	{
-		printf("%d, ", i);
-
+		for (i = n; i <= 98; i++)
+		{
+			if (i != 98)
+				printf("%d, ", i);
+			else if (i == 98)
+				printf("%d\n", i);
+		}
 	}
-	printf("\n");
+	else if (n >= 98)
+	{
+		for (j = n; j >= 98; j--)
+		{
+			if (j != 98)
+				printf("%d, ", j);
+			else if (j == 98)
+				printf("%d\n", j);
+		}
+	}
 }

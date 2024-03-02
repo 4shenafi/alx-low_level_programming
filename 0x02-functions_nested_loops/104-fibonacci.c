@@ -13,6 +13,7 @@ int main(void)
 	unsigned long int b2;
 	unsigned long int c1;
 	unsigned long int c2;
+
 	b = 1;
 	c = 2;
 

@@ -23,6 +23,7 @@ int main(void)
 	}
 	t = m3 + m5;
 	printf("%d\n", t);
+	return (0);
 }
 
 

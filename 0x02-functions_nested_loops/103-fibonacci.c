@@ -8,7 +8,7 @@ int main(void)
 {
     unsigned long int i = 1;
     unsigned long int j = 2;
-    unsigned long int n = 0; // Initialize n to avoid undefined behavior
+    unsigned long int n = 0; 
 
     printf("%lu, %lu, ", i, j);
 

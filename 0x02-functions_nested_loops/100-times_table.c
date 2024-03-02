@@ -16,10 +16,18 @@ void print_times_table(int n)
 			for (row = 0; row <= n; row++)
 			{
 				prod = col * row;
-				if (row < n)
+				if (row == 0)
+				{
+					printf("0,");
+				}
+				else if (row > 0 && row < n)
+				{
 					printf("%4d,", prod);
+				}
 				else
+				{
 					printf("%4d", prod);
+				}
 			}
 			printf("\n");
 		}

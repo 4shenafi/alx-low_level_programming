@@ -6,23 +6,23 @@
   */
 int main(void)
 {
-    unsigned long int i = 1;
-    unsigned long int j = 2;
-    unsigned long int n = 0; 
+	long int i;
+	long int a = 1;
+	long int b = 2;
+	long int s = 0;
+	long int t = 0;
 
-    printf("%lu, %lu, ", i, j);
+	for (i = 0; i < 49; i++)
+	{
+		if ((b % 2 == 0) && (b <= 4000000))
+		{
+			t = t + b;
+		}
+		s = a + b;
+		a = b;
+		b = s;
 
-    while (n <= 4000000)
-    {
-        n = i + j;
-        if (n <= 4000000)
-            printf("%lu", n);
-        if (n < 3524578)
-            printf(", ");
-        i = j;
-        j = n;
-    }
-    printf("\n");
-
-    return 0;
-}
+	}
+	printf("%ld\n", t);
+	return (0);
+	}

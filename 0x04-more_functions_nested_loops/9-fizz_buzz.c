@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
   * main - a function prints numbers and fizz buzz
   * Return: always return 0

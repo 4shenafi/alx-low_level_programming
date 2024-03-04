@@ -1,30 +1,32 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
+
 /**
-  * main - a function prints numbers and fizz buzz
-  * Return: always return 0
-  */
+ * main - prints numbers from 1 - 100 and corresponding
+ * Return: always 0 success
+ */
+
 int main(void)
 {
-	int i;
+	int k;
 
-	for (i = 1; i <= 100; i++)
+	for (k = 1; k <= 100; k++)
 	{
-		if (i % 3 == 0)
-		{
-			printf("Fizz ");
-		}
-		else if (i % 5 == 0)
-		{
-			printf("Buzz ");
-		}
-		else if (i % 3 == 0 && i % 5 == 0)
+		if (k % 3 == 0 && k % 5 == 0)
 		{
 			printf("FizzBuzz ");
 		}
+		else if (k % 3 == 0)
+		{
+			printf("Fizz ");
+		}
+		else if (k % 5 == 0)
+		{
+			printf("Buzz ");
+		}
 		else
 		{
-			printf("%d ", i);
+			printf("%d ", k);
 		}
 	}
 	printf("\n");

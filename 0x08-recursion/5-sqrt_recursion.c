@@ -1,10 +1,9 @@
 #include "main.h"
 /**
-  * _sqrt_recursion - returns recursion
-  * sqrt_helper -helps to find squared number
-  * @n: passed parameter
-  * @guess: passed parameter
-  * Return: returns
+  * sqrt_helper - Helper function for calculating the square root recursively
+  * @n: The number whose square root is to be calculated
+  * @guess: Current guess for the square root
+  * Return: The square root of n
   */
 int sqrt_helper(int n, int guess)
 {
@@ -21,6 +20,12 @@ int sqrt_helper(int n, int guess)
 		return (sqrt_helper(n, ++guess));
 	}
 }
+
+/**
+  * _sqrt_recursion - Calculates the square root of a non-negative integer
+  * @n: The number whose square root is to be calculated
+  * Return: The square root of n, or -1 if n is negative
+  */
 
 int _sqrt_recursion(int n)
 {

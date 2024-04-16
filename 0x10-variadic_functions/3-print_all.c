@@ -6,45 +6,44 @@
  * print_all - Custom printf function for various data types
  * @format: A format string indicating the data types to print
  */
+
 void print_all(const char * const format, ...)
 {
-	int i = 0;
-	va_list lists;
+	va_list args;
+	unsigned int i = 0;
+	char *separator = "";
 
-	va_start(lists, format);
+	va_start(args, format);
+
 	while (format && format[i])
 	{
-		char c;
-		int integer;
-		float f;
-		char *s;
-
 		switch (format[i])
 		{
 			case 'c':
-				c = va_arg(lists, int);
-				printf("%c", c);
+				printf("%s%c", separator, va_arg(args, int));
 				break;
 			case 'i':
-				integer = va_arg(lists, int);
-				printf("%d", integer);
+				printf("%s%d", separator, va_arg(args, int));
 				break;
 			case 'f':
-				f = va_arg(lists, double);
-				printf("%f", f);
+				printf("%s%f", separator, va_arg(args, double));
 				break;
 			case 's':
-				s = va_arg(lists, char *);
-				if (s == NULL)
-					printf("(nil)");
-				else
-					printf("%s", s);
+				{
+					char *s = va_arg(args, char *);
+
+					if (s == NULL)
+						s = "(nil)";
+					printf("%s%s", separator, s);
+					break;
+				}
+			default:
 				break;
 		}
-		if (format[i + 1])
-			printf(", ");
+		separator = ", ";
 		i++;
 	}
-	va_end(lists);
+
+	va_end(args);
 	printf("\n");
 }
